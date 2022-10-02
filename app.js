@@ -1,6 +1,7 @@
 //jshint esversion:6
 
 require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -97,7 +98,7 @@ app.get("/authenticate", function (req, res) {
 app.get("/analytics", function (req, res) {
   const userDB = Users.find();
 
-  const userSecretDB = Users.find(users.secret)
+  const userSecretDB = Users.find(users.secret);
 
   userDB.count(function (err, count) {
     if (err) console.log(err);
@@ -215,6 +216,10 @@ app.get("/:userID", function (req, res) {
   });
 });
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    "Server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
+});
