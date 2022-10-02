@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect(
-  "mongodb+srv://b1tsh3ll:Piyushshri%4012@cluster0.osn82.mongodb.net/SecretsDB"
+  "process.env.CRED"
 );
 
 //MONGODB Schema Define
