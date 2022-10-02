@@ -1,0 +1,14 @@
+<%- include('partials/navbar'); -%>
+<div class="dash-content">
+    <div class="overview">
+        <div class="title">
+            <span class="text">Submit Your Secret Here.....</span>
+        </div>
+        <form action="/submit" method="POST">
+
+            <div class="form-group">
+              <input type="text" class="form-control text-center" name="secret" placeholder="What's your secret?" minlength="20">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+          </form>
+    </div>

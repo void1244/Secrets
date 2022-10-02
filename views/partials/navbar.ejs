@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+
+<nav>
+    <ul class="menu">
+        <li class="logo"><a href="/">SECRETS</a> <span><img class="flexcardimgItem" src="img/hacker.png"
+                    alt="" /></span></li>
+        <li class="item"><a href="/secrets">Secrets</a></li>
+        <li class="item"><a href="/analytics">Analytics</a></li>
+        </li>
+        <li class="item button"><a href="/submit">UPLOAD</a></li>
+        <!-- <li class="item button secondary"><a href="/register">Register</a></li> -->
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
+
+
+<script>
+    $(function () {
+        $(".toggle").on("click", function () {
+            if ($(".item").hasClass("active")) {
+                $(".item").removeClass("active");
+            } else {
+                $(".item").addClass("active");
+            }
+        });
+    });
+</script>
+
